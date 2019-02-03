@@ -2,12 +2,53 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/js/bootstrap.min.js">
-    <link rel="stylesheet" href="../node_modules/jquery/dist/jquery.min.js">
     <title>Sell-It</title>
+
+    <!-- Insert this line above script imports  -->
+    <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+
+    <!-- normal script imports etc  -->
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+
+    <!-- Insert this line after script imports -->
+    <script>if (window.module) module = window.module;</script>
+
+
+    <link rel="stylesheet" href="mainWindow.css">
+    <script src="mainWindow.js"></script>
+
 </head>
 <body>
+<div class="container" id="mainContainer">
+    <div class="row" id="threeSectionRow">
+        <div class="col-1" id="firstColumn" >
+            <div class="row">
+                <div class="col-12" id="check-out-button">
+                    <img id="side-icons" src="../vendor/icons/cart-gray.png">
+                    <p class="icon-title">Check out</p>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-7" id="second-column" >
+            <div class="container" id="check-out-container">
+                <div class="bg-white">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form-group" id="search-formgroup">
+                                <input type="text" placeholder="Enter product name" class="form-control" id="search-box">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-4" style="background-color: aquamarine" ></div>
+    </div>
+</div>
 
 </body>
 </html>

@@ -12,14 +12,15 @@ app.on('ready', function () {
    mainWindow = new BrowserWindow({});
    //load html into window
     mainWindow.loadURL(url.format({
-        pathname: path.join(__dirname, 'mainWindow.html'),
+        pathname: path.join(__dirname, '/app/mainWindow.html'),
         protocol: 'file:',
         slashes: true
     }));
-    const mainMenu = Menu.buildFromTemplate(mainMenuTemplate);
-    Menu.setApplicationMenu(mainMenu);
+    /*const mainMenu = Menu.buildFromTemplate(mainMenuTemplate);
+    Menu.setApplicationMenu(mainMenu);*/
 });
 
+/*
 const mainMenuTemplate = [
     {
         label: 'Help',
@@ -35,4 +36,4 @@ const mainMenuTemplate = [
             }
         ]
     }
-]
+]*/

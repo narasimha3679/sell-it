@@ -1,0 +1,46 @@
+#mainContainer{
+    max-width: 100%;
+    max-height: 100%;
+}
+body{
+    overflow-x: visible !important;
+    overflow-y: visible !important;
+    background: #e9ebee;
+}
+html,body,#threeSectionRow,#mainContainer{
+    height: 100%;
+}
+#firstColumn{
+    background-color: #373942;
+    padding-top: 3%;
+}
+#side-icons{
+    width: 100%;
+    max-width: 65px;
+}
+.icon-title{
+    color: #697A8A;
+    font-weight: 500;
+}
+#check-out-button{
+    cursor: pointer;
+}
+#search-formgroup{
+    margin-bottom: 0;
+}
+.bg-white{
+    padding: 2%;
+    border-radius: 11px;
+}
+textarea:focus, input:focus{
+    outline: none;
+}
+#second-column{
+    margin-top: 2%;
+}
+#search-box{
+    width: 100%;
+}
+#check-out-container{
+    height: 100%;
+}

@@ -5,12 +5,18 @@
     <title>Sell-It</title>
 
     <!-- Insert this line above script imports  -->
-    <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+    <script>if (typeof module === 'object') {
+        window.module = module;
+        module = undefined;
+    }</script>
 
     <!-- normal script imports etc  -->
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../vendor/jquery-ui.css">
+
     <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../vendor/jquery-ui.min.js"></script>
 
     <!-- Insert this line after script imports -->
     <script>if (window.module) module = window.module;</script>
@@ -23,7 +29,7 @@
 <body>
 <div class="container" id="mainContainer">
     <div class="row" id="threeSectionRow">
-        <div class="col-1" id="firstColumn" >
+        <div class="col-1" id="firstColumn">
             <div class="row">
                 <div class="col-12" id="check-out-button">
                     <img id="side-icons" src="../vendor/icons/cart-gray.png">
@@ -32,21 +38,23 @@
 
             </div>
         </div>
-        <div class="col-7" id="second-column" >
+        <div class="col-7" id="second-column">
             <div class="container" id="check-out-container">
+                <!--search box-->
                 <div class="bg-white">
                     <div class="row">
                         <div class="col-12">
                             <div class="form-group" id="search-formgroup">
-                                <input type="text" placeholder="Enter product name" class="form-control" id="search-box">
+                                <input type="text" placeholder="Enter product name" class="form-control"
+                                       id="search-name">
                             </div>
                         </div>
                     </div>
                 </div>
-
+                <!--end search box-->
             </div>
         </div>
-        <div class="col-4" style="background-color: aquamarine" ></div>
+        <div class="col-4" style="background-color: aquamarine"></div>
     </div>
 </div>
 

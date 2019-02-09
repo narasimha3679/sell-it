@@ -13,6 +13,7 @@
     <!-- normal script imports etc  -->
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../vendor/jquery-ui.css">
+    <link rel="stylesheet" href="../vendor/fontawesome-free-5.7.1-web/css/all.min.css">
 
     <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
@@ -32,7 +33,7 @@
         <div class="col-1" id="firstColumn">
             <div class="row">
                 <div class="col-12" id="check-out-button">
-                    <img id="side-icons" src="../vendor/icons/cart-gray.png">
+                    <i id="side-icons" class="fas fa-cart-plus"></i>
                     <p class="icon-title">Check out</p>
                 </div>
 
@@ -41,20 +42,75 @@
         <div class="col-7" id="second-column">
             <div class="container" id="check-out-container">
                 <!--search box-->
-                <div class="bg-white">
+                <div class="search-bg-white bg-white">
                     <div class="row">
-                        <div class="col-12">
-                            <div class="form-group" id="search-formgroup">
+                        <div class="col-7">
+                            <div class="form-group" id="search-name-formgroup">
                                 <input type="text" placeholder="Enter product name" class="form-control"
                                        id="search-name">
+                            </div>
+                        </div>
+                        <div class="col-1" id="or-div">
+                            <p id="or-paragraph">or</p>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-group" id="search-id-formgroup">
+                                <input type="text" placeholder="product code" class="form-control"
+                                       id="search-id">
                             </div>
                         </div>
                     </div>
                 </div>
                 <!--end search box-->
+
+                <div class="table-bg-white bg-white">
+
+                    <table class="table table-borderless items-table">
+                        <thead class="thead-light">
+                        <tr>
+                            <th scope="col" id="first-th"></th>
+                            <th scope="col">Item Name</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Qty.</th>
+                            <th scope="col">Disc %</th>
+                            <th scope="col" id="last-th">Total</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row"><i class="fas fa-times-circle cancle-item-icon"></i></th>
+                            <td>green apple</td>
+                            <td>&#8377;22.00</td>
+                            <td>1</td>
+                            <td>0%</td>
+                            <td>&#8377;22.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><i class="fas fa-times-circle cancle-item-icon"></i></th>
+                            <td>green apple</td>
+                            <td>&#8377;22.00</td>
+                            <td>1</td>
+                            <td>0%</td>
+                            <td>&#8377;22.00</td>
+                        </tr>
+                        <!--          <tr>
+                                      <th scope="row">2</th>
+                                      <td>Jacob</td>
+                                      <td>Thornton</td>
+                                      <td>@fat</td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">3</th>
+                                      <td>Larry</td>
+                                      <td>the Bird</td>
+                                      <td>@twitter</td>
+                                  </tr>-->
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
-        <div class="col-4" style="background-color: aquamarine"></div>
+        <div class="col-4" id="third-column"></div>
     </div>
 </div>
 

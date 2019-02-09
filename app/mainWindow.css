@@ -25,12 +25,18 @@ html,body,#threeSectionRow,#mainContainer{
 #check-out-button{
     cursor: pointer;
 }
-#search-formgroup{
+#search-name-formgroup,#search-id-formgroup{
     margin-bottom: 0;
 }
-.bg-white{
+.search-bg-white{
     padding: 2%;
     border-radius: 11px;
+}
+.table-bg-white{
+    padding-top: 1%;
+    border-radius: 8px;
+    margin-top: 3%;
+
 }
 textarea:focus, input:focus{
     outline: none;
@@ -43,4 +49,27 @@ textarea:focus, input:focus{
 }
 #check-out-container{
     height: 100%;
+}
+.items-table{
+    width: 96%;
+    margin-left: 2%;
+}
+#first-th{
+    border-radius: 8px 0 0 8px;
+}
+#last-th{
+    border-radius: 0 8px 8px 0;
+}
+.cancle-item-icon{
+    color: red;
+    font-size: 15px;
+    cursor: pointer;
+}
+#or-div{
+    padding: 0 0 0 15px;
+}
+#or-paragraph{
+    margin: 0 0 0 0;
+    font-size: 23px;
+    color: #565758;
 }

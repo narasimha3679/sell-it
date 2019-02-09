@@ -4,7 +4,7 @@ const path = require('path');
 const {app, BrowserWindow, Menu} = electron;
 const sqlite3 = require('sqlite3').verbose();
 const ipc = electron.ipcMain;
-let db = new sqlite3.Database('./database/database.sqlite3');
+let db = new sqlite3.Database('./database.sqlite3');
 require('electron-reload')(__dirname);
 
 let mainWindow;

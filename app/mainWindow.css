@@ -73,3 +73,8 @@ textarea:focus, input:focus{
     font-size: 23px;
     color: #565758;
 }
+#empty-cart{
+    font-size: 22px;
+    text-align: center;
+    color: #eac841;
+}

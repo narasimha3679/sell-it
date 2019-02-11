@@ -1,14 +1,14 @@
 const electron = require('electron');
 const ipc = electron.ipcRenderer;
-var itemsList = [];
-var searchResults;
+let itemsList = [];
+let searchResults;
 
 $(document).ready(function () {
 
     // Below is the name of the textfield that will be autocomplete
     $('#search-name').autocomplete({
         // This shows the min length of charcters that must be typed before the autocomplete looks for a match.
-        minLength: 3,
+        minLength: 2,
         source: function (request, response) {
 
             ipc.send("search-query", $('#search-name').val());
@@ -37,10 +37,21 @@ $(document).ready(function () {
         select: function (event, ui) {
             itemsList.push(ui.item.value);
 
+            $('#empty-cart').css('display', 'none');
+
             // finding selected object from list of search result objects
             var selectedObj = $.grep(searchResults, function (selectedObj) {
                 return selectedObj.productCode === ui.item.value;
             })[0];
+
+            $('#tableBody').append("<tr>\n" +
+                "                            <th scope=\"row\"><i class=\"fas fa-times-circle cancle-item-icon\" id='"+selectedObj.productCode+"'></i></th>\n" +
+                "                            <td>"+selectedObj.productName+"</td>\n" +
+                "                            <td>&#8377;"+selectedObj.productPrice+"</td>\n" +
+                "                            <td>1</td>\n" +
+                "                            <td>"+selectedObj.productDiscount+"%</td>\n" +
+                "                            <td>&#8377;"+selectedObj.productPrice+"</td>\n" +
+                "                        </tr>")
 
             $('#search-name').val('');
             return false;

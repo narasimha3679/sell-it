@@ -13,6 +13,7 @@ html,body,#threeSectionRow,#mainContainer{
 #firstColumn{
     background-color: #373942;
     padding-top: 3%;
+    color: #697A8A;
 }
 #side-icons{
     width: 100%;
@@ -60,7 +61,7 @@ textarea:focus, input:focus{
 #last-th{
     border-radius: 0 8px 8px 0;
 }
-.cancle-item-icon{
+.cancel-item-icon{
     color: red;
     font-size: 15px;
     cursor: pointer;
@@ -77,4 +78,101 @@ textarea:focus, input:focus{
     font-size: 22px;
     text-align: center;
     color: #eac841;
+}
+#third-column{
+    margin-top: 2%;
+}
+.cancel-sale-section-bg{
+    border-radius: 11px;
+    padding-bottom: 6%;
+}
+/*start cancel sale button*/
+.cancel-sale-section{
+    text-align: center;
+}
+#cancel-sale-btn{
+    background: orange;
+    color: #fff;
+    height: 41px;
+    width: 150px;
+    margin: 25px 25px;
+    text-align: center;
+    border: none;
+    transition: all 0.3s ease 0s;
+    border-radius: 33px;
+    outline: none;
+    cursor: pointer;
+}
+
+#cancel-sale-btn:hover {
+    background: #CF4647;
+}
+.cancel-sale-section::after{
+    content: "";
+    display: inline-block;
+    height: 24px;
+    vertical-align: bottom;
+    width: 100%;
+    border-top: 0.5px solid #b5b5b5;
+}
+/*end cancel sale button*/
+.search-user-with-phonenumber-form{
+    width: 80%;
+    margin-left: 11%;
+}
+.add-customer-icon-wrapper{
+    cursor: pointer;
+}
+.total-sale-section-bg{
+    margin-top: 4%;
+    border-radius: 11px;
+    text-align: center;
+    padding: 0 4% 4% 4%;
+}
+.total-sale-section{
+    padding: 20px 0 0 0;
+}
+#confirm-sale-btn{
+    background: orange;
+    color: #fff;
+    height: 41px;
+    width: 150px;
+    margin: 25px 25px;
+    text-align: center;
+    border: none;
+    transition: all 0.3s ease 0s;
+    border-radius: 33px;
+    outline: none;
+    cursor: pointer;
+}
+
+#confirm-sale-btn:hover {
+    background: #CF4647;
+}
+/*.total-label{
+    text-align: -webkit-left;
+    margin-left: 26%;
+}*/
+#grand-total-amount{
+    color: #6FD64B;
+}
+.sub-total-section-wrapper{
+    padding: 5% 3% 0 3%;
+    text-align: left;
+    font-size: 14px;
+}
+.align-right{
+    float: right;
+}
+.sub-total-section{
+    background-color: #f0fbec;
+    padding: 5px 3% 5px 3%;
+    text-align: left;
+}
+.sub-total{
+    margin: 0;
+}
+a:not([href]):not([tabindex]) {
+    color: white;
+    text-decoration: none;
 }

@@ -21,16 +21,20 @@ function createWindow() {
 
     /*ipc start*/
     ipc.on('search-query', function (event, arg) {
-        db.serialize(function () {
-
-            db.all("SELECT productName, productCode, productPrice, productDiscount FROM products WHERE productName LIKE '%"+arg+"%' LIMIT 5", function (err, row) {
-                console.log(row);
-                event.sender.send("search-results",row);
-            })
 
 
+        db.all("SELECT productName, productCode, productPrice, productDiscount FROM products WHERE productName LIKE '%" + arg + "%' LIMIT 5", function (err, row) {
+            console.log(row);
+            event.sender.send("search-name-results", row);
         })
 
+    });
+    ipc.on("search-product-with-code", function (event, arg) {
+
+        db.all("SELECT productName, productCode, productPrice, productDiscount FROM products WHERE productCode LIKE '%" + arg + "%' LIMIT 1", function (err, row) {
+            console.log(row);
+            event.sender.send("search-code-results", row);
+        })
     });
     /*ipc end*/
 

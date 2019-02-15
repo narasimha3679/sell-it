@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="../vendor/jquery-ui.css">
     <link rel="stylesheet" href="../vendor/fontawesome-free-5.7.1-web/css/all.min.css">
 
+
     <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../vendor/jquery-ui.min.js"></script>
@@ -22,7 +23,7 @@
     <!-- Insert this line after script imports -->
     <script>if (window.module) module = window.module;</script>
 
-
+    <link rel="stylesheet" href="salebutton.css">
     <link rel="stylesheet" href="mainWindow.css">
     <script src="mainWindow.js"></script>
 
@@ -83,7 +84,7 @@
                             </th>
                         </tr>
                         <!-- <tr>
-                                 <th scope="row"><i class="fas fa-times-circle cancle-item-icon"></i></th>
+                                 <th scope="row"><i class="fas fa-times-circle cancel-item-icon"></i></th>
                                  <td>green apple</td>
                                  <td>&#8377;22.00</td>
                                  <td>1</td>
@@ -95,9 +96,47 @@
                 </div>
             </div>
         </div>
-        <div class="col-4" id="third-column"></div>
+        <div class="col-4" id="third-column">
+            <div class="bg-white cancel-sale-section-bg">
+
+                <div class="cancel-sale-section">
+                    <button id="cancel-sale-btn"><i class="fas fa-times"></i> Cancel Sale</button>
+                </div>
+                <div class="user-phone-number-section">
+                    <div class="input-group search-user-with-phonenumber-form">
+                        <div class="input-group-prepend add-customer-icon-wrapper">
+                            <span class="input-group-text"><i class="fas fa-user-plus"></i></span>
+                        </div>
+                        <input class="form-control phone-number-box" type="text" placeholder="type phone number">
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white total-sale-section-bg">
+                <div class="sub-total-section-wrapper">
+                    <div class="sales-person-section">
+                        <p>Sales Person:<span class="align-right">Not Set</span></p>
+                    </div>
+                    <div class="total-discount-section">
+                        <p>Discount Entire Sale: <span class="align-right">Set Discount</span></p>
+                    </div>
+                </div>
+                <div class="sub-total-section">
+                    <p class="sub-total">Sub Total: <span class="align-right">&#8377;20.00</span></p>
+                </div>
+                <div class="total-sale-section">
+                    <h4 class="total-label">Total</h4>
+                    <h3 id="grand-total-amount">&#8377;1524.00</h3>
+                </div>
+                <div class="purchase-button-section">
+                    <div class="confirm-sale-section">
+                        <div class="complete-sale-wrapper">
+                            <a class="fancy-button pop-onhover bg-gradient1"><span>Complete Sale</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-
 </body>
 </html>

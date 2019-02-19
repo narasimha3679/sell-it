@@ -5,8 +5,8 @@ it is a point of sale application which is compleately free, forever
 
 Check out the code:
 
-    git clone https://github.com/nolanlawson/hello-electron-with-pouchdb
-    cd hello-electron-with-pouchdb
+    git clone https://github.com/narasimha3679/sell-it.git
+    cd sell-it
 
 Then npm install:
 

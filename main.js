@@ -14,7 +14,9 @@ function createWindow() {
     //creating new window
     mainWindow = new BrowserWindow({
         'height': 580,
-        'width': 1000
+        'width': 1000,
+        'minHeight': 580,
+        'minWidth': 1000
     });
     //load html into window
     mainWindow.loadFile('./app/mainWindow.html');

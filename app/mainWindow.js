@@ -5,6 +5,8 @@ let itemsList = [];
 let searchResults;
 let notFountObject = [{productName: 'no result found'}];
 let canceledItemCode;
+let totalBill;
+let totalDiscount;
 
 $(document).ready(function () {
 
@@ -108,7 +110,7 @@ function addItemToList(name, code, price, discount) {
     return false;
 }
 
-// search-code-results
+// here comes the search-product-with-code-results
 ipc.on("search-code-results", function (event, arg) {
     $('#empty-cart').css('display', 'none');
     console.table(arg[0]);
